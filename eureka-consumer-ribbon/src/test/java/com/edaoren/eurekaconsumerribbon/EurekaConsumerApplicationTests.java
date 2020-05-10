@@ -1,4 +1,4 @@
-package com.edaoren.eurekaconsumer;
+package com.edaoren.eurekaconsumerribbon;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

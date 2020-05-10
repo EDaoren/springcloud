@@ -1,24 +1,27 @@
-package com.edaoren.eurekaconsumer;
+package com.edaoren.eurekaconsumerribbon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
  * Eureka 消费者
+ *
  * @author EDaoren
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class EurekaConsumerApplication {
+public class EurekaConsumerRibbonApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaConsumerApplication.class, args);
+        SpringApplication.run(EurekaConsumerRibbonApplication.class, args);
     }
 
     @Bean
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
